@@ -10,6 +10,7 @@ activityCompose = "1.10.1"
 composeBom = "2025.02.00"
 firebaseBom = "33.10.0"
 services = "4.4.0"
+crashlytics = "3.0.3"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -35,4 +36,6 @@ firebase-crashlytics = {module = "com.google.firebase:firebase-crashlytics"}
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 googleServices = {id = "com.google.gms.google.services", version.ref = "services"}
+crashlytics = {id = "com.google.firebase.crashlytics", version.ref = "crashlytics"}
+
 
