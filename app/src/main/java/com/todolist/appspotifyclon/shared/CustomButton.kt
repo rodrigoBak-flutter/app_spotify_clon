@@ -15,15 +15,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.material3.Text
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import com.todolist.appspotifyclon.R
 import com.todolist.appspotifyclon.ui.theme.BackgroundButton
 import com.todolist.appspotifyclon.ui.theme.ShapeButton
 
 
 @Composable
-fun CustomButton(){
+fun CustomButton(modifier: Modifier,painter: Painter, title: String){
     Box(
         modifier = Modifier
             .fillMaxWidth()
@@ -34,10 +34,10 @@ fun CustomButton(){
         contentAlignment = Alignment.CenterStart,
 
     ){
-        Image(painter = painterResource(id = R.drawable.google)
+        Image(painter = painter
             , contentDescription = "",
             modifier = Modifier.padding(start = 16.dp).size(16.dp)
         )
-        Text(text = "", color = Color.White, modifier = Modifier.fillMaxWidth(), textAlign = TextAlign.Center)
+        Text(title, color = Color.White, modifier = Modifier.fillMaxWidth(), textAlign = TextAlign.Center,fontWeight = FontWeight.Bold)
     }
 }

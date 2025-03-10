@@ -6,6 +6,8 @@
     <string name="sing_google">Continuar con Google</string>
     <string name="sing_faceebook">Continuar con Facebook</string>
     <string name="login_initial">Iniciar sesion</string>
+    <string name="email">Correo</string>
+    <string name="password">Contraseña</string>
 
 
 </resources>

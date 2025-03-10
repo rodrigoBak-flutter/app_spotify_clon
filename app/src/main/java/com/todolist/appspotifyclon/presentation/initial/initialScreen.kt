@@ -2,6 +2,7 @@ package com.todolist.appspotifyclon.presentation.initial
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -21,6 +22,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -32,8 +34,7 @@ import com.todolist.appspotifyclon.ui.theme.Green
 
 @Preview
 @Composable
-fun InitialScreen(){
-
+fun InitialScreen(navigateToLogin:() -> Unit = {}, navigateToSingUp: () -> Unit = {}){
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -47,17 +48,19 @@ fun InitialScreen(){
         Spacer(modifier = Modifier.weight(1f))
         Text(stringResource(id = R.string.title_initial),
             color = Color.White,
-            fontSize = 38.sp,
-            fontWeight = FontWeight.Bold
+            fontSize = 28.sp,
+            fontWeight = FontWeight.Bold,
+            textAlign = TextAlign.Center
         )
         Text(stringResource(id = R.string.subtitle_initial),
             color = Color.White,
-            fontSize = 38.sp,
-            fontWeight = FontWeight.Bold
+            fontSize = 28.sp,
+            fontWeight = FontWeight.Bold,
+            textAlign = TextAlign.Center
         )
         Spacer(modifier = Modifier.weight(1f))
         Button(
-            onClick = {}
+            onClick = {navigateToSingUp()}
             ,modifier = Modifier
                 .fillMaxWidth()
                 .height(48.dp)
@@ -67,13 +70,27 @@ fun InitialScreen(){
         ) {
             Text(text = stringResource(id = R.string.sing_up_app),
                 color = Black,
+                fontWeight = FontWeight.Bold
                 )
         }
         Spacer(modifier = Modifier.height(8.dp))
-        CustomButton()
+        CustomButton(
+            Modifier.clickable {  }, painterResource(id = R.drawable.google), title = stringResource(id = R.string.sing_google)
+        )
         Spacer(modifier = Modifier.height(8.dp))
-        CustomButton()
+        CustomButton(
+            Modifier.clickable {  }, painterResource(id = R.drawable.facebook), title = stringResource(id = R.string.sing_faceebook)
+        )
         Spacer(modifier = Modifier.height(8.dp))
+        Text(text = stringResource(id = R.string.login_initial),
+            color = Color.White,
+            modifier = Modifier
+                .padding(24.dp)
+                .clickable { navigateToLogin() },
+            fontWeight = FontWeight.Bold
+
+        )
+        Spacer(modifier = Modifier.weight(1f))
     }
 }
 
