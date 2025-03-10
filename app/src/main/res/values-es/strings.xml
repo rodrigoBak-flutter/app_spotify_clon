@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AppSpotifyClon</string>
+    <string name="title_initial">Millones de canciones.</string>
+    <string name="subtitle_initial">Gratis con Spotify</string>
+    <string name="sing_up_app">Registrarse gratis</string>
+    <string name="sing_google">Continuar con Google</string>
+    <string name="sing_faceebook">Continuar con Facebook</string>
+    <string name="login_initial">Iniciar sesion</string>
+
+
+</resources>

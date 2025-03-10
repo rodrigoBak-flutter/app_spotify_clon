@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">AppSpotifyClon</string>
+    <string name="title_initial">Millions of songs.</string>
+    <string name="subtitle_initial">Free on Spotify</string>
+    <string name="sing_up_app">Sing up Now</string>
+    <string name="sing_google">Continue with Google</string>
+    <string name="sing_faceebook">Continue with Facebook</string>
+    <string name="login_initial">Log in</string>
+
+
 </resources>
